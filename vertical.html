@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Timeline</title>
+    <style>
+        * {
+             box-sizing: border-box;
+              margin: 0; 
+              padding: 0; 
+              font-family: Arial, sans-serif; 
+            }
+        body { 
+            background-color: #f4f4f4; 
+            padding: 20px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background: #3498db;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .container {
+            position: relative;
+            background: white;
+            width: 40%;
+            padding: 10px 20px;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .left { 
+            left: 0; text-align: right; 
+        }
+        .right { 
+            left: 60%; text-align: left;
+        }
+        .container::after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            width: 10px;
+            height: 10px;
+            background: #3498db;
+            border-radius: 50%;
+            left: 100%;
+            margin-left: -5px;
+        }
+        .right::after { left: -5px; }
+        .icon {
+            position: absolute;
+            top: 10px;
+            width: 40px;
+            height: 40px;
+            background: #3498db;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            color: white;
+            font-size: 20px;
+            left: 100%;
+            margin-left: 10px;
+        }
+        .right .icon { 
+            right: -50px;
+         }
+        
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <div class="container left">
+            <h2>Sports Events</h2>
+            <p>Channel a competitive and spirited tone for sports events. Provide information on teams, schedules, and special guests or events. Stoke the fans’ passion.</p>
+            <div class="icon">📅</div>
+        </div>
+        <div class="container right">
+            <h2>Performing Arts Shows:</h2>
+            <p>Keep descriptions elegant and captivating for theater and art shows. Highlight the theme, notable performances, and any critical acclaim. Make it an experience to remember.</p>
+            <div class="icon">🚀</div>
+        </div>
+        <div class="container left">
+            <h2>Networking Events:</h2>
+            <p>Adopt a professional and opportunity-focused tone for networking events. Showcase the value in forming new connections and the caliber of attendees.</p>
+            <div class="icon">🎉</div>
+        </div>
+        <div class="container right">
+            <h2>Fundraising Events</h2>
+            <p>Craft an inspiring and heartfelt narrative for charity events. Share the story behind the cause and the impact of donations. Stir emotions and motivate people to contribute.</p>
+            <div class="icon">🏆</div>
+        </div>
+    </div>
+</body>
+</html>
