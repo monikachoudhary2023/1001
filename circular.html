@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Progress Bar</title>
+    <style>
+        	
+        body{
+            background-color: #131313;
+        }
+
+        .skills{
+            display: flex;
+            text-align: center;
+            margin: 10% 25%;
+        }
+
+        .skill{
+            width: 200px;
+            height: 200px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3), -5px -5px 20px rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            position: relative;
+            display: grid;
+            place-items: center;
+        }
+
+        .skill:not(:last-child){
+            margin-right: 3rem;
+        }
+        .skill::before{
+            content:"";
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            border-radius: 50%;
+            background-color: #131313;
+            box-shadow: inset 5px 5px 20px rgba(0, 0, 0, 0.3), -5px -5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill:nth-child(1){
+            background-image: conic-gradient(#e19c7c 85%, transparent 0);
+            color: #e18a62;
+        }
+
+        .skill:nth-child(2){
+            background-image: conic-gradient(#1b84c1 70%, transparent 0);
+            color: #72b2d7;
+        }
+
+        .skill:nth-child(3){
+            background-image: conic-gradient(#b3ae86 50%, transparent 0);
+            color: #cfc67d;
+        }
+        .content{
+            font-size: 20px;
+            z-index: 1;
+            text-align: center;
+            font-family: Poppins;
+        }
+        .content span{
+        display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="skills">
+    	<div class="skill">
+    		<div class="content">
+    			<span>85%</span><span>HTML</span>
+    		</div>
+    	</div>
+    	<div class="skill">
+    		<div class="content">
+    			<span>70%</span><span>CSS</span>
+    		</div>	
+    	</div>
+    	<div class="skill">
+    		<div class="content">
+    			<span>50%</span><span>JavaScript</span>
+    		</div>	
+    	</div>
+
+    </div>
+</body>
+</html>
